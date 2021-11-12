@@ -7,6 +7,7 @@ Anggota :
 
 # Soal
 Luffy yang sudah menjadi Raja Bajak Laut ingin mengembangkan daerah kekuasaannya dengan membuat peta seperti berikut:
+
 <img width="501" alt="Screen Shot 2021-11-12 at 17 20 19" src="https://user-images.githubusercontent.com/72669398/141451163-e456c534-c25e-4144-a8d6-4fdb1501fc98.png">
 
 # Soal No 1
