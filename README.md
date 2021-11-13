@@ -155,9 +155,9 @@ auth_param basic realm Proxy
 auth_param basic credentialsttl 2 hours
 auth_param basic casesensitive on
 acl USERS proxy_auth REQUIRED
-http_access allow USERS
-http_access allow AVAILABLE_WORKING
+http_access allow USERS AVAILABLE_WORKING
 http_access deny all
+
 ```
 
 Kemudian restart Squid pada node Water7.
@@ -168,25 +168,9 @@ Kemudian untuk membuat user luffybelikapald02 dengan password luffy_d02 dapat di
 htpasswd -c -m /etc/squid/passwd luffybelikapald02
 ```
 
-<img width="502" alt="modul3_no8910-a" src="https://user-images.githubusercontent.com/72669398/141601857-fe2c2244-7d29-42dd-8fd8-55b99d515ca6.png">
 
-Dan untuk membuat user zorobelikapald02 dengan password zoro_d02 dapat dijalankan
 
-```
-htpasswd -m /etc/squid/passwd zorobelikapald02
-```
 
-<img width="496" alt="modul3_no8910-b" src="https://user-images.githubusercontent.com/72669398/141601859-abcc5bc3-f822-4000-86bd-0926974770b9.png">
-
-Setelah itu, aktifkan Proxy pada Client Loguetown dengan menjalankan
-
-```
-export http_proxy="http://10.22.2.3"
-```
-
-Kemudian periksa waktu uji coba dengan menjalankan date, lalu jalankan ``lynx jualbelikapal.d02.com`` untuk mencoba mengakses web, kemudian masukkan username dan password untuk login. Jika waktu uji coba merupakan waktu saat website tidak dapat diakses maka akan terdapat tulisan Access Denied.
-
-gambar
 
 # Soal No 11
 Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar mudah mengingat website transaksi jual beli kapal. Setiap mengakses google.com, akan diredirect menuju super.franky.yyy.com dengan website yang sama pada soal shift modul 2. Web server super.franky.yyy.com berada pada node Skypie (11).
