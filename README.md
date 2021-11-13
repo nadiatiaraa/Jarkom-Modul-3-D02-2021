@@ -15,18 +15,18 @@ Luffy bersama Zoro berencana membuat peta tersebut dengan kriteria EniesLobby se
 
 Pembuatan topologi dimana node EniesLobby digunakan sebagai DNS Server dengan menginstall apt-get install bind9, Jipangu sebagai DHCP Server dengan menginstall apt-get install isc-dhcp-server, dan Water7 sebagai proxy Server dengan menginstall apt-get install squid.
 
-gambar
+<img width="495" alt="modul3_no1" src="https://user-images.githubusercontent.com/72669398/141601807-45a7015e-444c-40b7-b581-5ae192fe0f5f.png">
 
 # Soal No 2
 Foosha sebagai DHCP Relay
 
 Membuat node Foosha sebagai DHCP relay dengan menginstall apt-get install isc-dhcp-relay
 
-gambar
+<img width="495" alt="modul3_no2a" src="https://user-images.githubusercontent.com/72669398/141601811-211b1042-954c-4b69-acc7-c30cdf4a4325.png">
 
 Setelah menginstall DHCP relay, pada node Jipangu masukkan INTERFACES="eth0" pada file /etc/default/isc-dhcp-server untuk mendapatkan layanan dari DHCP Server.
 
-gambar
+<img width="500" alt="modul3_no2b" src="https://user-images.githubusercontent.com/72669398/141601813-6b5e466b-3a0a-40fe-a6e6-a147abaead3f.png">
 
 # Soal No 3, 4, 5, dan 6
 Ada beberapa kriteria yang ingin dibuat oleh Luffy dan Zoro, yaitu:
@@ -81,20 +81,24 @@ Lalu, restart node Client.
 Setelah itu, lakukan pengecekan IP setiap Client dengan menjalankan ip a, dan didapatkan hasil sebagai berikut
 
 Client Loguetown
-gambar
+
+<img width="491" alt="modul3_no3456-a" src="https://user-images.githubusercontent.com/72669398/141601834-c5497052-f558-4a5d-8597-1260c57243a3.png">
 
 Client Alabasta
-gambar
+
+<img width="489" alt="modul3_no3456-b" src="https://user-images.githubusercontent.com/72669398/141601845-4e0fd541-7f5a-4b97-ae81-b6517eaeeb68.png">
 
 Client TottoLand
-gambar
+
+<img width="495" alt="modul3_no3456-c" src="https://user-images.githubusercontent.com/72669398/141601849-b6a64260-5e0f-407c-bd00-7d7c4538824e.png">
 
 Client Skypie
-gambar
+
+<img width="496" alt="modul3_no3456-d" src="https://user-images.githubusercontent.com/72669398/141601855-94b9dcf3-f96c-40b0-8639-917614dd7cd0.png">
 
 Untuk pengecekan client dapat terhubung dengan internet melalui DNS dari EniesLobby dapat menggunakan perintah ``cat /etc/resolv.conf``
 
-gambar
+<img width="331" alt="modul3_no3456-e" src="https://user-images.githubusercontent.com/72669398/141601856-e1fefccf-0325-4616-8428-32254ca8666f.png">
 	
 # Soal No 7
 Luffy dan Zoro berencana menjadikan Skypie sebagai server untuk jual beli kapal yang dimilikinya dengan alamat IP yang tetap dengan IP ``[prefix IP].3.69 (7)``. 
@@ -168,7 +172,7 @@ Kemudian untuk membuat user luffybelikapald02 dengan password luffy_d02 dapat di
 htpasswd -c -m /etc/squid/passwd luffybelikapald02
 ```
 
-gambar
+<img width="502" alt="modul3_no8910-a" src="https://user-images.githubusercontent.com/72669398/141601857-fe2c2244-7d29-42dd-8fd8-55b99d515ca6.png">
 
 Dan untuk membuat user zorobelikapald02 dengan password zoro_d02 dapat dijalankan
 
@@ -176,7 +180,7 @@ Dan untuk membuat user zorobelikapald02 dengan password zoro_d02 dapat dijalanka
 htpasswd -m /etc/squid/passwd zorobelikapald02
 ```
 
-gambar
+<img width="496" alt="modul3_no8910-b" src="https://user-images.githubusercontent.com/72669398/141601859-abcc5bc3-f822-4000-86bd-0926974770b9.png">
 
 Setelah itu, aktifkan Proxy pada Client Loguetown dengan menjalankan
 
