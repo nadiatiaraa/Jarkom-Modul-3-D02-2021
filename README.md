@@ -38,9 +38,9 @@ Client mendapatkan DNS dari EniesLobby dan client dapat terhubung dengan interne
 
 Lama waktu DHCP server meminjamkan alamat IP kepada Client yang melalui Switch1 selama 6 menit sedangkan pada client yang melalui Switch3 selama 12 menit. Dengan waktu maksimal yang dialokasikan untuk peminjaman alamat IP selama 120 menit.(6)
 
-Melakukan konfigurasi pada DHCP Server dimana untuk Client yang melalui Switch1 mendapatkan range IP 10.22.1.20 - 10.22.1.99 dan 10.22.1.150 - 10.22.1.169. Sedangkan untuk Client yang melalui Switch3 menggunakan range IP 10.22.3.30 - 10.22.3.50. Client mendapatkan DNS dari EniesLobby dan client dapat terhubung dengan internet melalui DNS tersebut. Durasi peminjaman alamat IP pada Client yang terhubung dengan Switch1 adalah 6 menit (360 detik), sedangkan durasi peminjaman Client yang terhubung dengan Switch2 adalah 12 menit (720 detik) dengan waktu maksimal alokasi peminjaman alamat IP adalah 120 menit (7200 detik). 
+Melakukan konfigurasi pada DHCP Server dimana untuk Client yang melalui Switch1 mendapatkan range IP ``10.22.1.20 - 10.22.1.99`` dan ``10.22.1.150 - 10.22.1.169``. Sedangkan untuk Client yang melalui Switch3 menggunakan range IP ``10.22.3.30 - 10.22.3.50``. Client mendapatkan DNS dari EniesLobby dan client dapat terhubung dengan internet melalui DNS tersebut. Durasi peminjaman alamat IP pada Client yang terhubung dengan Switch1 adalah 6 menit (360 detik), sedangkan durasi peminjaman Client yang terhubung dengan Switch2 adalah 12 menit (720 detik) dengan waktu maksimal alokasi peminjaman alamat IP adalah 120 menit (7200 detik). 
 
-Untuk itu, maka ubah script file /etc/dhcp/dhcpd.conf pada node Jipangu menjadi sebagai berikut
+Untuk itu, maka ubah script file ``/etc/dhcp/dhcpd.conf`` pada node Jipangu menjadi sebagai berikut
 
 ```
 subnet 10.22.1.0 netmask 255.255.255.0 {
