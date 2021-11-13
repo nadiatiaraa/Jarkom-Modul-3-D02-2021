@@ -13,18 +13,18 @@ Luffy yang sudah menjadi Raja Bajak Laut ingin mengembangkan daerah kekuasaannya
 # Soal No 1
 Luffy bersama Zoro berencana membuat peta tersebut dengan kriteria EniesLobby sebagai DNS Server, Jipangu sebagai DHCP Server, Water7 sebagai Proxy Server
 
-Pembuatan topologi dimana node EniesLobby digunakan sebagai DNS Server dengan menginstall apt-get install bind9, Jipangu sebagai DHCP Server dengan menginstall apt-get install isc-dhcp-server, dan Water7 sebagai proxy Server dengan menginstall apt-get install squid.
+Pembuatan topologi dimana node EniesLobby digunakan sebagai DNS Server dengan menginstall `apt-get install bind9`, Jipangu sebagai DHCP Server dengan menginstall `apt-get install isc-dhcp-server`, dan Water7 sebagai proxy Server dengan menginstall `apt-get install squid`.
 
 <img width="495" alt="modul3_no1" src="https://user-images.githubusercontent.com/72669398/141601807-45a7015e-444c-40b7-b581-5ae192fe0f5f.png">
 
 # Soal No 2
 Foosha sebagai DHCP Relay
 
-Membuat node Foosha sebagai DHCP relay dengan menginstall apt-get install isc-dhcp-relay
+Membuat node Foosha sebagai DHCP relay dengan menginstall `apt-get install isc-dhcp-relay`
 
 <img width="495" alt="modul3_no2a" src="https://user-images.githubusercontent.com/72669398/141601811-211b1042-954c-4b69-acc7-c30cdf4a4325.png">
 
-Setelah menginstall DHCP relay, pada node Jipangu masukkan INTERFACES="eth0" pada file /etc/default/isc-dhcp-server untuk mendapatkan layanan dari DHCP Server.
+Setelah menginstall DHCP relay, pada node Jipangu masukkan `INTERFACES="eth0"` pada file `/etc/default/isc-dhcp-server` untuk mendapatkan layanan dari DHCP Server.
 
 <img width="500" alt="modul3_no2b" src="https://user-images.githubusercontent.com/72669398/141601813-6b5e466b-3a0a-40fe-a6e6-a147abaead3f.png">
 
@@ -64,7 +64,7 @@ subnet 10.22.3.0 netmask 255.255.255.0 {
     max-lease-time 7200;
 }
 ```
-Lalu lakukan restart DHCP server pada node Jipangu dengan perintah service ``isc-dhcp-server restart dan restart`` juga DHCP relay pada node Foosha dengan perintah ``/etc/init.d/isc-dhcp-relay start``.
+Lalu lakukan restart DHCP server pada node Jipangu dengan perintah service ``isc-dhcp-server restart`` dan start DHCP relay pada node Foosha dengan perintah ``/etc/init.d/isc-dhcp-relay start``.
 
 Kemudian ubah script ``/etc/network/interfaces`` pada node-node Client menjadi sebagai berikut
 
@@ -211,7 +211,7 @@ Setelah itu, aktifkan Proxy pada Client Loguetown dengan menjalankan
 export http_proxy="http://jualbelikapal.d02.com:5000"
 ```
 
-Kemudian periksa waktu uji coba dengan menjalankan date, lalu jalankan ``lynx its.ac.id`` untuk mencoba mengakses web, kemudian masukkan username dan password untuk login. Jika waktu uji coba merupakan waktu saat website tidak dapat diakses maka akan terdapat tulisan Access Denied.
+Kemudian periksa waktu uji coba dengan menjalankan date, lalu jalankan ``lynx its.ac.id`` untuk mencoba mengakses web, kemudian masukkan username dan password untuk login. Jika waktu uji coba merupakan waktu saat website dapat diakses maka user akan masuk ke website, namu jika waktu uji coba merupakan waktu saat website tidak dapat diakses maka akan terdapat tulisan Access Denied.
 
 
 <img width="262" alt="modul3_no8910-c" src="https://user-images.githubusercontent.com/72669398/141642917-1a459635-6522-476c-8d7b-a2c097a3626a.png">
@@ -235,3 +235,7 @@ Saatnya berlayar! Luffy dan Zoro akhirnya memutuskan untuk berlayar untuk mencar
 # Soal No 13
 Sedangkan, Zoro yang sangat bersemangat untuk mencari harta karun, sehingga kecepatan kapal Zoro tidak dibatasi ketika sudah mendapatkan harta yang diinginkannya (13).
 
+# Kendala Pengerjaan
+1. Pada saat ingin mengakses web jualbelikapal.d02.com, website terblokir (muncul internet positif)
+2. Pada saat uji coba nomor 8, saat proxy yang dinyalakan menggunakan domain jualbelikapal.d02.com, website tidak dapat diakses
+3. Pada saat menguji coba nomor 10, dimana uji coba dilakukan saat website seharusnya tidak dapat diakses, tetapi website dapat diakses
