@@ -197,4 +197,3 @@ Saatnya berlayar! Luffy dan Zoro akhirnya memutuskan untuk berlayar untuk mencar
 # Soal No 13
 Sedangkan, Zoro yang sangat bersemangat untuk mencari harta karun, sehingga kecepatan kapal Zoro tidak dibatasi ketika sudah mendapatkan harta yang diinginkannya (13).
 
-
