@@ -52,13 +52,9 @@ subnet 10.22.1.0 netmask 255.255.255.0 {
     default-lease-time 360;
     max-lease-time 7200;
 }
-```
 
-```
 subnet 10.22.2.0 netmask 255.255.255.0 {}
-```
 
-```
 subnet 10.22.3.0 netmask 255.255.255.0 {
     range 10.22.3.30 10.22.3.50;
     option routers 10.22.3.1;
