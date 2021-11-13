@@ -168,8 +168,62 @@ Kemudian untuk membuat user luffybelikapald02 dengan password luffy_d02 dapat di
 htpasswd -c -m /etc/squid/passwd luffybelikapald02
 ```
 
+<img width="499" alt="modul3_no8910-a" src="https://user-images.githubusercontent.com/72669398/141642910-06fe0764-2bab-4722-b7d5-92e98bd9a22f.png">
+
+Dan untuk membuat user zorobelikapald02 dengan password zoro_d02 dapat dijalankan
+
+```
+htpasswd -m /etc/squid/passwd zorobelikapald02
+```
+
+<img width="501" alt="modul3_no8910-b" src="https://user-images.githubusercontent.com/72669398/141642915-08757d3a-ac14-4b89-a119-bdff298adf42.png">
+
+Buat folder ``/etc/bind/proxy/jualbelikapal.d02.com`` pada node EniesLobby dengan script sebagai berikut 
+
+```
+$TTL    604800
+@       IN      SOA     jualbelikapal.d02.com. root.jualbelikapal.d02.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      jualbelikapal.d02.com.
+@       IN      A       10.22.2.3       ;IP Water7
+
+```
+
+Lalu, buat zone pada folder ``/etc/bind/named.conf.local`` dengan script sebagai berikut
+
+```
+zone "jualbelikapal.d02.com" {
+        type master;
+        file "/etc/bind/proxy/jualbelikapal.d02.com";
+};
+```
+
+Lalu restart DNS pada node EniesLobby
+
+Setelah itu, aktifkan Proxy pada Client Loguetown dengan menjalankan
+
+```
+export http_proxy="http://jualbelikapal.d02.com:5000"
+```
+
+Kemudian periksa waktu uji coba dengan menjalankan date, lalu jalankan ``lynx its.ac.id`` untuk mencoba mengakses web, kemudian masukkan username dan password untuk login. Jika waktu uji coba merupakan waktu saat website tidak dapat diakses maka akan terdapat tulisan Access Denied.
 
 
+<img width="262" alt="modul3_no8910-c" src="https://user-images.githubusercontent.com/72669398/141642917-1a459635-6522-476c-8d7b-a2c097a3626a.png">
+
+
+<img width="496" alt="modul3_no8910-d" src="https://user-images.githubusercontent.com/72669398/141642919-966cdf65-4001-4d81-8a56-1e93d8c623cd.png">
+
+
+<img width="286" alt="modul3_no8910-e" src="https://user-images.githubusercontent.com/72669398/141642921-259a02f2-57f5-4d65-8bf3-fa8cc9395193.png">
+
+
+<img width="492" alt="modul3_no8910-f" src="https://user-images.githubusercontent.com/72669398/141642922-c41dd826-1f4c-40a1-9c8b-7a0b20dd1d75.png">
 
 
 # Soal No 11
