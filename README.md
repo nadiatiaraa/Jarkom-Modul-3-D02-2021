@@ -124,7 +124,7 @@ Pada network interface yang dapat diakses pada ``/etc/network/interfaces``.
 Kemudian restart node Skypie.
 Setelah itu dilakukan pengecekan dengan menjalankan ip a, dapat dilihat bahwa ip yang dipinjam adalah ``10.22.3.69``.
 
-gambar
+<img width="491" alt="modul3_no7" src="https://user-images.githubusercontent.com/72669398/141602061-8228de2c-46bc-41e4-b397-61d1c0aeb6c7.png">
 
 # Soal No 8, 9, dan 10
 Pada Loguetown, proxy harus bisa diakses dengan nama jualbelikapal.yyy.com dengan port yang digunakan adalah 5000 (8). 
